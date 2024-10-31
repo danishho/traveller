@@ -1,0 +1,433 @@
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+    color: #2c3e50;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navigation styling */
+.nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  height: 150px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin: auto; 
+  gap: 2rem; 
+}
+
+
+.nav-links a {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: #0277bd; 
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #0277bd; 
+    color: #ffffff;
+}
+
+.nav-links a.active {
+    background-color: #0277bd; 
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* footer styling */
+footer {
+    background-color: #01579b; 
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid #ffffff;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}
+
+.footer-navigation, .footer-contact, .footer-social {
+    margin: 10px;
+}
+
+.footer-navigation h3, .footer-contact h3, .footer-social h3 {
+    color: #bbdefb; 
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-navigation ul, .footer-social .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation ul li, .social-icon {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-navigation ul li a, .social-icon {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px;
+    background-color: #0277bd;
+    margin-right: 5px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer-navigation ul li a:hover {
+    transform: translateY(-3px);
+    background-color: #0288d1; 
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    background-color: #81d4fa; 
+    color: #01579b; 
+}
+
+.nav-actions .dropdown-content a {
+    color: #0277bd;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.nav-actions .dropdown-content a:hover {
+    background-color: #81d4fa; 
+    color: #01579b; 
+}
+
+/* activity styling */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.activity-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-content {
+    padding: 1.5rem;
+}
+
+.activity-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #0277bd;
+    font-size: 1.25rem;
+}
+
+.activity-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.activity-details {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f5f9ff;
+    border-radius: 8px;
+}
+
+.activity-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-details i {
+    color: #0277bd;
+    width: 20px;
+}
+
+.weather-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 800px; 
+}
+
+.weather-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.weather-header img {
+    width: 48px;
+    height: 48px;
+}
+
+.weather-header h3 {
+    color: #0277bd;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    align-items: center;
+}
+
+.weather-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    color: #455a64;
+}
+
+.weather-item i {
+    color: #0277bd;
+    font-size: 2.5rem; 
+    width: 40px;
+    text-align: center;
+}
+
+
+.weather-item img {
+    width: 40px; 
+    height: 40px;
+}
+
+.weather-item span {
+    font-weight: 500;
+    font-size: 1.2rem; 
+}
+
+.save-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.save-btn:hover {
+    background-color: #01579b;
+}
+
+.error {
+    color: #d32f2f;
+    text-align: center;
+    padding: 1rem;
+    background: #ffebee;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+/* file select option  */
+.file-select {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #0277bd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: white;
+    min-width: 400px;
+    height: 50px;
+}
+
+.file-select:focus {
+    outline: none;
+    border-color: #01579b;
+    box-shadow: 0 0 0 2px rgba(1, 87, 155, 0.2);
+}
+
+.search-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.search-btn {
+    padding: 0.8rem 1.5rem;
+    height: 50px;
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background-color: #01579b;
+}
+
+.search-btn i {
+    font-size: 1.1rem;
+}
+
+
+main {
+    padding: 2rem 4rem; 
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* activityl list style */
+.activities-container {
+    margin-top: 3rem;
+}
+
+.activities-container h2 {
+    text-align: center;
+    color: #0277bd;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-card:hover .activity-overlay {
+    opacity: 1;
+}
+
+/* add to itenary styling */
+.add-to-itinerary {
+    background: #0277bd;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-to-itinerary:hover {
+    background: #01579b;
+    transform: scale(1.05);
+}
